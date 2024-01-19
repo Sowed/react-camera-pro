@@ -170,8 +170,11 @@ const initCameraStream = (
     video: {
       deviceId: videoSourceDeviceId ? { exact: videoSourceDeviceId } : undefined,
       facingMode: currentFacingMode,
-      width: { ideal: 1920 },
-      height: { ideal: 1920 },
+      // TODO: Revert this if a fix is made.
+      // Commented out this in an attempt to directly test as to why these
+      // dimmentions are breaking ios 17.2+
+      // width: { ideal: 1920 },
+      // height: { ideal: 1920 },
     },
   };
 
